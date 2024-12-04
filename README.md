@@ -35,7 +35,7 @@ composer require hejunjie/hardware-monitor
 ```php
 use Hejunjie\HardwareMonitor\CPUInfo;
 
-$cpuInfo = CPUInfo::getInfo();
+$cpuInfo = CPUInfo::getCpuInfo();
 echo 'CPU 模型: ' . $cpuInfo['model'];
 echo '物理核心数: ' . $cpuInfo['cores'];
 echo '逻辑核心数: ' . $cpuInfo['logical_cores'];
@@ -63,7 +63,7 @@ echo '等待 I/O 操作的时间百分比: ' . $cpuUsage['wait'];
 ```php
 use Hejunjie\HardwareMonitor\MemoryInfo;
 
-$memoryInfo = MemoryInfo::getUsage();
+$memoryInfo = MemoryInfo::getMemoryUsage();
 echo '总内存: ' . $memoryInfo['total'] . ' MB';
 echo '已用内存: ' . $memoryInfo['used'] . ' MB';
 echo '空闲内存: ' . $memoryInfo['free'] . ' MB';
@@ -78,7 +78,7 @@ echo '缓冲区内存: ' . $memoryInfo['buffers'] . ' MB';
 ```php
 use Hejunjie\HardwareMonitor\DiskInfo;
 
-$diskInfo = DiskInfo::getInfo();
+$diskInfo = DiskInfo::getDiskInfo();
 foreach ($diskInfo as $disk) {
     echo '硬盘设备名称: ' . $disk['device'];
     echo '硬盘型号: ' . $disk['model'];
