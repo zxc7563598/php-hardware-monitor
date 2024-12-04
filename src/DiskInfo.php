@@ -19,9 +19,9 @@ class DiskInfo extends BaseMonitor
      * @return array 根据操作系统类型执行相应的命令，返回包含硬盘信息的数组，字段包括：
      * - 'device' => string 硬盘设备名称（例如 /dev/sda，C:）
      * - 'model' => string 硬盘型号
-     * - 'size' => float 硬盘总容量（GB）
-     * - 'free' => float 剩余容量（GB）
-     * - 'used' => float 已用容量（GB）
+     * - 'size' => float 硬盘总容量（MB）
+     * - 'used' => float 已用容量（MB）
+     * - 'free' => float 剩余容量（MB）
      * - 'capacity' => string 占用百分比
      * - 'filesystem' => string 文件系统类型
      * - 'mountpoint' => string 挂载点

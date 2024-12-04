@@ -39,13 +39,7 @@ class CPUInfo extends BaseMonitor
     /**
      * 获取当前系统的 CPU 信息，包括型号、物理核心数、逻辑核心数以及每个插槽的核心数（Linux 特有）。
      *
-     * 该方法根据操作系统类型执行相应的命令，返回一个包含以下字段的数组：
-     * - `model`：CPU 型号（例如 Intel 或 AMD）。
-     * - `cores`：物理核心数，表示 CPU 中实际存在的核心数量。
-     * - `logical_cores`：逻辑核心数，表示操作系统可以使用的核心数（包括多线程技术，例如超线程）。
-     * - `cores_per_socket`：每个物理插槽的核心数（仅在 Linux 上适用）。
-     *
-     * @return array 返回一个包含以下字段的关联数组：
+     * @return array 根据操作系统类型执行相应的命令，返回一个包含以下字段的关联数组：
      * - `model` => `string` CPU 型号（例如 "Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz"）
      * - `cores` => `int` 物理核心数（例如 4）
      * - `logical_cores` => `int` 逻辑核心数（例如 8）
