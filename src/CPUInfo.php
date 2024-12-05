@@ -59,4 +59,25 @@ class CPUInfo extends BaseMonitor
                 throw new Exception("不支持的操作系统: {$instance->osType}");
         }
     }
+
+    /**
+     * 获取当前系统的 CPU 负载信息
+     * 
+     * @return array 根据 sys_getloadavg() 提供的数据，返回一个包含以下字段的关联数组：
+     * - `1min` => `float` 1分钟内负载
+     * - `5min` => `float` 5分钟内负载
+     * - `15min` => `float` 15分钟内负载
+     */
+    public static function getCpuLoad()
+    {
+        $instance = self::getInstance();
+        switch ($instance->osType) {
+            case 'Linux':
+                return Linux\CPU::getCpuLoad();
+            case 'MacOS':
+                return MacOs\CPU::getCpuLoad();
+            default:
+                throw new Exception("不支持的操作系统: {$instance->osType}");
+        }
+    }
 }

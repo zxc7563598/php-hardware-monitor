@@ -76,4 +76,27 @@ class CPU extends BaseMonitor
         // 返回数据
         return $cpuInfo;
     }
+
+    /**
+     * 获取 MacOS 系统 CPU 负载
+     * 
+     * @return array CPU负载信息
+     */
+    public static function getCpuLoad(): array
+    {
+        $load = sys_getloadavg();
+        $cpuLoad = [
+            '1min' => 0,
+            '5min' => 0,
+            '15min' => 0
+        ];
+        if ($load) {
+            $cpuLoad = [
+                '1min' => round($load[0], 2),
+                '5min' => round($load[1], 2),
+                '15min' => round($load[2], 2)
+            ];
+        }
+        return $cpuLoad;
+    }
 }
