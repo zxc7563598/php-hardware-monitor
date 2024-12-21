@@ -3,7 +3,7 @@
 namespace Hejunjie\HardwareMonitor\MacOS;
 
 use Exception;
-use Hejunjie\HardwareMonitor\Core\BaseMonitor;
+use Hejunjie\HardwareMonitor\Heart\BaseMonitor;
 
 class CPU extends BaseMonitor
 {

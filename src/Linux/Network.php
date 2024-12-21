@@ -3,7 +3,7 @@
 namespace Hejunjie\HardwareMonitor\Linux;
 
 use Exception;
-use Hejunjie\HardwareMonitor\Core\BaseMonitor;
+use Hejunjie\HardwareMonitor\Heart\BaseMonitor;
 
 class Network extends BaseMonitor
 {

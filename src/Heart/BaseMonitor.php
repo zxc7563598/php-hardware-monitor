@@ -1,6 +1,6 @@
 <?php
 
-namespace Hejunjie\HardwareMonitor\Core;
+namespace Hejunjie\HardwareMonitor\Heart;
 
 abstract class BaseMonitor
 {

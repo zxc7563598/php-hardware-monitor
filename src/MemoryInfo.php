@@ -3,7 +3,7 @@
 namespace Hejunjie\HardwareMonitor;
 
 use Exception;
-use Hejunjie\HardwareMonitor\Core\BaseMonitor;
+use Hejunjie\HardwareMonitor\Heart\BaseMonitor;
 use Hejunjie\HardwareMonitor\Linux;
 use Hejunjie\HardwareMonitor\MacOS;
 
